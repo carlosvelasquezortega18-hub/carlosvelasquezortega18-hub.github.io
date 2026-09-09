@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Datos II</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin: 0 0 15px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        nav {
+            background: #020617;
+            padding: 18px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #60a5fa;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            color: #60a5fa;
+            font-size: 32px;
+            border-left: 5px solid #2563eb;
+            padding-left: 12px;
+        }
+
+        .intro {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .semanas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .semana {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .semana:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+        }
+
+        .semana h3 {
+            color: #60a5fa;
+        }
+
+        .semana p {
+            color: #cbd5e1;
+        }
+
+        .numero {
+            background: #2563eb;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        .tecnologias span {
+            display: inline-block;
+            background: #1d4ed8;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 5px;
+        }
+
+        .sobre {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 30px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 35px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>BASE DE DATOS II</h1>
+    <p>Portafolio académico de 16 semanas</p>
+    <p>Carlos Velásquez Ortega</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#semanas">16 Semanas</a>
+    <a href="#tecnologias">Tecnologías</a>
+    <a href="#sobre">Sobre mí</a>
+</nav>
+
+<div class="contenedor">
+
+    <section id="inicio">
+        <div class="intro">
+            <h2>Bienvenido 👋</h2>
+            <p>
+                Este sitio web presenta las actividades,
+                conocimientos y aprendizajes desarrollados
+                durante el curso de <strong>Base de Datos II</strong>.
+            </p>
+        </div>
+    </section>
+
+    <section id="semanas">
+
+        <h2>Las 16 semanas 📚</h2>
+
+        <div class="semanas">
+
+            <div class="semana">
+                <span class="numero">SEMANA 1</span>
+                <h3>Introducción a Base de Datos II</h3>
+                <p>Repaso de conceptos fundamentales y presentación del curso.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 2</span>
+                <h3>Modelo relacional</h3>
+                <p>Tablas, registros, claves primarias y claves foráneas.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 3</span>
+                <h3>SQL avanzado</h3>
+                <p>Consultas SQL y operaciones para trabajar con información.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 4</span>
+                <h3>Consultas JOIN</h3>
+                <p>Relación y combinación de información entre diferentes tablas.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 5</span>
+                <h3>Subconsultas</h3>
+                <p>Uso de consultas dentro de otras consultas SQL.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 6</span>
+                <h3>Funciones SQL</h3>
+                <p>Funciones de agregación, texto, números y fechas.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 7</span>
+                <h3>Vistas</h3>
+                <p>Creación y utilización de vistas para consultar información.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 8</span>
+                <h3>Procedimientos almacenados</h3>
+                <p>Automatización de operaciones mediante procedimientos.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 9</span>
+                <h3>Funciones almacenadas</h3>
+                <p>Creación y utilización de funciones definidas por el usuario.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 10</span>
+                <h3>Triggers</h3>
+                <p>Automatización de acciones mediante disparadores.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 11</span>
+                <h3>Transacciones</h3>
+                <p>COMMIT, ROLLBACK y control de operaciones.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 12</span>
+                <h3>Concurrencia</h3>
+                <p>Control de acceso simultáneo a la información.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 13</span>
+                <h3>Seguridad</h3>
+                <p>Usuarios, roles y permisos dentro de una base de datos.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 14</span>
+                <h3>Backup y recuperación</h3>
+                <p>Copias de seguridad y recuperación de información.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 15</span>
+                <h3>Optimización</h3>
+                <p>Optimización de consultas y mejora del rendimiento.</p>
+            </div>
+
+            <div class="semana">
+                <span class="numero">SEMANA 16</span>
+                <h3>Proyecto final</h3>
+                <p>Integración y aplicación de los conocimientos aprendidos.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="tecnologias">
+        <h2>Tecnologías 💻</h2>
+
+        <div class="tecnologias">
+            <span>SQL</span>
+            <span>MySQL</span>
+            <span>SQL Server</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>GitHub</span>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div class="sobre">
+            <h2>Sobre mí 👨‍💻</h2>
+
+            <p><strong>Nombre:</strong> Carlos Velásquez Ortega</p>
+
+            <p><strong>Curso:</strong> Base de Datos II</p>
+
+            <p>
+                Este portafolio muestra mi progreso y los principales
+                temas estudiados durante las 16 semanas del curso.
+            </p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 Carlos Velásquez Ortega</p>
+    <p>Base de Datos II</p>
+</footer>
+
+</body>
+</html>
