@@ -6,6 +6,21 @@
     <title>Base de Datos II</title>
 
     <style>
+        .enlace-semana {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.enlace-semana .semana {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.enlace-semana .semana:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -183,37 +198,25 @@
 
         <div class="semanas">
 
-<div class="semana">
+<a href="semana1.html" class="enlace-semana">
+    <div class="semana">
+        <h3>Semana 1</h3>
+        <p>Introducción a Base de Datos II</p>
 
-    <span class="numero">SEMANA 1</span>
+        <h4>Contenido</h4>
+        <ul>
+            <li>Conceptos fundamentales de bases de datos</li>
+            <li>Arquitectura de bases de datos</li>
+            <li>Sistemas gestores de bases de datos</li>
+        </ul>
 
-    <h3>Introducción a Base de Datos II</h3>
-
-    <p>
-        En esta semana se realizó la introducción al curso de
-        Base de Datos II y se repasaron los conceptos fundamentales
-        de las bases de datos.
-    </p>
-
-    <h4>📚 Contenido</h4>
-
-    <ul>
-        <li>Conceptos de bases de datos</li>
-        <li>Base de datos relacional</li>
-        <li>Tablas y registros</li>
-        <li>Claves primarias</li>
-        <li>Claves foráneas</li>
-    </ul>
-
-    <h4>🎯 Lo aprendido</h4>
-
-    <p>
-        Aprendí los conceptos fundamentales necesarios para trabajar
-        con bases de datos y comprender su estructura.
-    </p>
-
-</div>
-
+        <h4>Lo aprendido</h4>
+        <p>
+            Aprendí los conceptos fundamentales de las bases de datos
+            y la importancia de utilizar un sistema gestor de bases de datos.
+        </p>
+    </div>
+</a>
 
            <div class="semana">
 
