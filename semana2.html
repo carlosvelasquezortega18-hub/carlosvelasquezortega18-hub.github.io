@@ -1,77 +1,380 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Semana 2 - Base de Datos II</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#0b1f3a;color:white}
-header{background:#12345b;padding:30px;text-align:center}
-header h1{margin:0;font-size:35px}
-.contenedor{width:85%;max-width:1000px;margin:40px auto}
-.contenido{background:white;color:#222;padding:30px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.3)}
-h2,h3{color:#12345b}
-li{margin:10px 0}
-.aprendizaje{background:#e8f1ff;padding:20px;border-radius:10px;margin-top:20px}
-.volver{display:inline-block;margin-top:25px;padding:12px 20px;background:#1f8f4d;color:white;text-decoration:none;border-radius:8px}
-footer{text-align:center;padding:25px;margin-top:40px;background:#12345b}
-</style>
+    <title>Semana 2 - Base de Datos II</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin: 0 0 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .actividad {
+            background: #1e293b;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            border: 1px solid #334155;
+        }
+
+        .actividad h2 {
+            color: #60a5fa;
+            border-left: 5px solid #2563eb;
+            padding-left: 12px;
+            margin-bottom: 25px;
+        }
+
+        .actividad p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        /* MANUAL */
+
+        .manual {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .manual h3 {
+            color: #93c5fd;
+        }
+
+        .manual p {
+            color: #cbd5e1;
+        }
+
+        .boton-manual {
+            display: inline-block;
+            margin-top: 15px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .boton-manual:hover {
+            background: #1d4ed8;
+        }
+
+        /* INFOGRAFIAS */
+
+        .infografias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .infografia {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .infografia h3 {
+            color: #93c5fd;
+            margin-bottom: 15px;
+        }
+
+        .infografia img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .sin-imagen {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1e293b;
+            border: 2px dashed #475569;
+            border-radius: 8px;
+            color: #94a3b8;
+            padding: 10px;
+        }
+
+        /* APRENDIZAJE */
+
+        .aprendizaje {
+            background: #1d4ed8;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .aprendizaje h2 {
+            color: white;
+        }
+
+        .aprendizaje p {
+            line-height: 1.7;
+        }
+
+        /* BOTON */
+
+        .boton {
+            display: inline-block;
+            margin-top: 30px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            .contenedor {
+                padding: 25px 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-<h1>BASE DE DATOS II</h1>
-<p>Semana 2 - Modelo Relacional</p>
-<p>Carlos Velásquez Ortega</p>
+    <h1>SEMANA 2</h1>
+    <p>Instalación y configuración de MS-SQL Server</p>
 </header>
 
 <div class="contenedor">
-<div class="contenido">
 
-<h2>Semana 2: Modelo Relacional</h2>
+    <!-- ================================= -->
+    <!-- ACTIVIDAD 1 -->
+    <!-- ================================= -->
 
-<h3>Información</h3>
-<p>
-El modelo relacional permite organizar la información en tablas
-formadas por filas y columnas, facilitando el almacenamiento y
-consulta de los datos.
-</p>
+    <div class="actividad">
 
-<h3>Contenido</h3>
-<ul>
-<li>Modelo relacional.</li>
-<li>Tablas y registros.</li>
-<li>Campos y atributos.</li>
-<li>Claves primarias.</li>
-<li>Claves foráneas.</li>
-<li>Relaciones entre tablas.</li>
-</ul>
+        <h2>Actividad 1</h2>
 
-<h3>Tarea</h3>
-<p>
-Elaborar un ejemplo de una base de datos utilizando tablas,
-identificando las claves primarias y claves foráneas.
-</p>
+        <p>
+            Manual de instalación de MS-SQL Server.
+        </p>
 
-<div class="aprendizaje">
-<h3>Lo aprendido</h3>
-<p>
-Aprendí cómo organizar información mediante tablas y cómo
-establecer relaciones utilizando claves primarias y foráneas.
-</p>
+        <div class="manual">
+
+            <h3>Manual de instalación de MS-SQL Server</h3>
+
+            <p>
+                En esta actividad se presenta el manual correspondiente
+                al proceso de instalación de MS-SQL Server.
+            </p>
+
+            <p>
+                El manual permitirá revisar paso a paso el procedimiento
+                utilizado para instalar y configurar el sistema gestor
+                de bases de datos.
+            </p>
+
+            <!--
+            CUANDO SUBAS EL MANUAL A GITHUB
+            PUEDES COLOCAR AQUÍ EL ENLACE.
+            -->
+
+            <a href="#" class="boton-manual">
+                📘 Ver manual de instalación
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- ACTIVIDAD 2 -->
+    <!-- ================================= -->
+
+    <div class="actividad">
+
+        <h2>Actividad 2</h2>
+
+        <p>
+            En esta actividad se presentan ocho infografías
+            relacionadas con los temas desarrollados durante
+            la Semana 2.
+        </p>
+
+        <div class="infografias">
+
+            <!-- INFOGRAFÍA 1 -->
+
+            <div class="infografia">
+                <h3>Infografía 1</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 1
+                </div>
+            </div>
+
+
+            <!-- INFOGRAFÍA 2 -->
+
+            <div class="infografia">
+                <h3>Infografía 2</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 2
+                </div>
+            </div>
+
+
+            <!-- INFOGRAFÍA 3 -->
+
+            <div class="infografia">
+                <h3>Infografía 3</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 3
+                </div>
+            </div>
+
+
+            <!-- INFOGRAFÍA 4 -->
+
+            <div class="infografia">
+                <h3>Infografía 4</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 4
+                </div>
+            </div>
+
+
+            <!-- INFOGRAFÍA 5 -->
+
+            <div class="infografia">
+                <h3>Infografía 5</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 5
+                </div>
+            </div>
+
+
+            <!-- INFOGRAFÍA 6 -->
+
+            <div class="infografia">
+                <h3>Infografía 6</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 6
+                </div>
+            </div>
+
+
+            <!-- INFOGRAFÍA 7 -->
+
+            <div class="infografia">
+                <h3>Infografía 7</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 7
+                </div>
+            </div>
+
+
+            <!-- INFOGRAFÍA 8 -->
+
+            <div class="infografia">
+                <h3>Infografía 8</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 8
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================= -->
+    <!-- APRENDIZAJE -->
+    <!-- ================================= -->
+
+    <div class="aprendizaje">
+
+        <h2>¿Qué aprendí?</h2>
+
+        <p>
+            Durante la Semana 2 aprendí aspectos relacionados con
+            la instalación y configuración de MS-SQL Server y
+            reforcé los conocimientos relacionados con la gestión
+            de bases de datos.
+        </p>
+
+    </div>
+
+
+    <!-- VOLVER AL INICIO -->
+
+    <a href="index.html" class="boton">
+        ← Volver al inicio
+    </a>
+
 </div>
 
-<h3>Infografía</h3>
-<p>Aquí se colocará la infografía de la Semana 2.</p>
 
-<a href="index.html" class="volver">← Volver al inicio</a>
+<footer>
 
-</div>
-</div>
+    <p>© 2026 Carlos Velásquez Ortega</p>
+    <p>Base de Datos II</p>
 
-<footer>© 2026 Carlos Velásquez Ortega - Base de Datos II</footer>
+</footer>
 
 </body>
 </html>
