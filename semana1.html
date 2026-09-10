@@ -7,171 +7,294 @@
     <title>Semana 1 - Base de Datos II</title>
 
     <style>
-
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #0b1f3a;
+            background: #0f172a;
             color: white;
         }
 
         header {
-            background: #12345b;
-            padding: 30px;
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
             text-align: center;
+            padding: 50px 20px;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 35px;
+            font-size: 40px;
+            margin: 0 0 10px;
         }
 
         header p {
-            margin-top: 10px;
             font-size: 18px;
         }
 
         .contenedor {
-            width: 85%;
-            max-width: 1000px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
         }
 
-        .contenido {
-            background: white;
-            color: #222;
+        .actividad {
+            background: #1e293b;
             padding: 30px;
+            margin-bottom: 40px;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid #334155;
         }
 
-        h2 {
-            color: #12345b;
-            border-bottom: 2px solid #12345b;
-            padding-bottom: 10px;
+        .actividad h2 {
+            color: #60a5fa;
+            border-left: 5px solid #2563eb;
+            padding-left: 12px;
+            margin-bottom: 25px;
         }
 
-        h3 {
-            color: #12345b;
+        .actividad p {
+            color: #cbd5e1;
+            line-height: 1.7;
         }
 
-        li {
-            margin: 10px 0;
-        }
-
-        .aprendizaje {
-            background: #e8f1ff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .volver {
-            display: inline-block;
+        .infografias {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
             margin-top: 25px;
-            padding: 12px 20px;
-            background: #1f8f4d;
-            color: white;
-            text-decoration: none;
+        }
+
+        .infografia {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .infografia h3 {
+            color: #93c5fd;
+            margin-bottom: 15px;
+        }
+
+        .infografia img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
             border-radius: 8px;
         }
 
-        .volver:hover {
-            background: #166b39;
+        .sin-imagen {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1e293b;
+            border: 2px dashed #475569;
+            border-radius: 8px;
+            color: #94a3b8;
+            padding: 10px;
+        }
+
+        .aprendizaje {
+            background: #1d4ed8;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 30px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            background: #1d4ed8;
         }
 
         footer {
+            background: #020617;
             text-align: center;
             padding: 25px;
-            margin-top: 40px;
-            background: #12345b;
+            color: #94a3b8;
         }
 
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            .contenedor {
+                padding: 25px 15px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-    <header>
+<header>
+    <h1>SEMANA 1</h1>
+    <p>Introducción a Base de Datos II</p>
+</header>
 
-        <h1>BASE DE DATOS II</h1>
+<div class="contenedor">
 
-        <p>Semana 1 - Introducción a Base de Datos II</p>
+    <!-- ========================= -->
+    <!-- ACTIVIDAD 1 -->
+    <!-- ========================= -->
 
-        <p>Carlos Velásquez Ortega</p>
+    <div class="actividad">
 
-    </header>
+        <h2>Actividad 1</h2>
 
+        <p>
+            En esta actividad se presentan los contenidos correspondientes
+            a la primera actividad de la Semana 1 mediante cuatro infografías.
+        </p>
 
-    <div class="contenedor">
+        <div class="infografias">
 
-        <div class="contenido">
+            <!-- INFOGRAFÍA 1 -->
+            <div class="infografia">
+                <h3>Infografía 1</h3>
 
-            <h2>Semana 1</h2>
-
-            <h3>Introducción a Base de Datos II</h3>
-
-            <h2>Información de la semana</h2>
-
-            <p>
-                En esta semana se estudiaron los conceptos fundamentales
-                relacionados con las bases de datos y su importancia
-                dentro de los sistemas de información.
-            </p>
-
-            <h3>Contenido</h3>
-
-            <ul>
-                <li>Conceptos fundamentales de bases de datos.</li>
-                <li>Importancia de las bases de datos.</li>
-                <li>Sistemas gestores de bases de datos.</li>
-                <li>Arquitectura de bases de datos.</li>
-                <li>Organización de la información.</li>
-            </ul>
-
-
-            <h3>Tarea</h3>
-
-            <p>
-                Realizar una investigación sobre los principales conceptos
-                de las bases de datos y los sistemas gestores de bases de datos.
-            </p>
-
-
-            <div class="aprendizaje">
-
-                <h3>Lo aprendido</h3>
-
-                <p>
-                    Aprendí los conceptos básicos de las bases de datos,
-                    su importancia en los sistemas de información y la
-                    función de los sistemas gestores de bases de datos.
-                </p>
-
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 1
+                </div>
             </div>
 
+            <!-- INFOGRAFÍA 2 -->
+            <div class="infografia">
+                <h3>Infografía 2</h3>
 
-            <h3>Infografía</h3>
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 2
+                </div>
+            </div>
 
-            <p>
-                Aquí se colocará la infografía correspondiente a la Semana 1.
-            </p>
+            <!-- INFOGRAFÍA 3 -->
+            <div class="infografia">
+                <h3>Infografía 3</h3>
 
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 3
+                </div>
+            </div>
 
-            <a href="index.html" class="volver">
-                ← Volver al inicio
-            </a>
+            <!-- INFOGRAFÍA 4 -->
+            <div class="infografia">
+                <h3>Infografía 4</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 4
+                </div>
+            </div>
 
         </div>
 
     </div>
 
 
-    <footer>
+    <!-- ========================= -->
+    <!-- ACTIVIDAD 2 -->
+    <!-- ========================= -->
 
-        © 2026 Carlos Velásquez Ortega - Base de Datos II
+    <div class="actividad">
 
-    </footer>
+        <h2>Actividad 2</h2>
+
+        <p>
+            En esta actividad se presentan los contenidos correspondientes
+            a la segunda actividad de la Semana 1 mediante cinco infografías.
+        </p>
+
+        <div class="infografias">
+
+            <!-- INFOGRAFÍA 1 -->
+            <div class="infografia">
+                <h3>Infografía 1</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 1
+                </div>
+            </div>
+
+            <!-- INFOGRAFÍA 2 -->
+            <div class="infografia">
+                <h3>Infografía 2</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 2
+                </div>
+            </div>
+
+            <!-- INFOGRAFÍA 3 -->
+            <div class="infografia">
+                <h3>Infografía 3</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 3
+                </div>
+            </div>
+
+            <!-- INFOGRAFÍA 4 -->
+            <div class="infografia">
+                <h3>Infografía 4</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 4
+                </div>
+            </div>
+
+            <!-- INFOGRAFÍA 5 -->
+            <div class="infografia">
+                <h3>Infografía 5</h3>
+
+                <div class="sin-imagen">
+                    Aquí se colocará la infografía 5
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- APRENDIZAJE -->
+    <!-- ========================= -->
+
+    <div class="aprendizaje">
+
+        <h2>¿Qué aprendí?</h2>
+
+        <p>
+            Durante la Semana 1 aprendí los conceptos fundamentales
+            relacionados con Base de Datos II y la importancia de la
+            organización, almacenamiento y gestión de la información
+            mediante sistemas de bases de datos.
+        </p>
+
+    </div>
+
+
+    <!-- BOTÓN REGRESAR -->
+
+    <a href="index.html" class="boton">
+        ← Volver al inicio
+    </a>
+
+</div>
+
+<footer>
+    <p>© 2026 Carlos Velásquez Ortega</p>
+    <p>Base de Datos II</p>
+</footer>
 
 </body>
 </html>
